@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block article %}
+<div class="container">
+	<div class="row">
+		<div class="offset-2 col-lg-8 offset-2">
+			<form method="post" action={{ url_for('submit') }}>
+				<div>
+					<table class="table">
+						<tr>
+							<td>
+								<h2>Submit Your Paper</h2>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="title">Title</label></td>
+							<td><input type="text" name="title" class="form-control" required></td>
+						</tr>
+						<tr>
+							<td><label for="abstract">Abstract</label></td>
+							<td><textarea name="abstract" class="form-control" required></textarea></td>
+						</tr>
+						<tr>
+							<td><label for="keywords">Keywords</label></td>
+							<td><input type="text" name="keywords" class="form-control" required></td>
+						</tr>
+						<tr>
+							<td><label for="docfile">Import Your Paper</label></td>
+							<td><input type="file" name="docfile" class="form-control" required></td>
+						</tr>
+						<tr><td>
+							<input type="submit" value="Send" class="btn btn-primary" 
+							onsubmit="checkvalues()">
+						</td></tr>
+					</table>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}

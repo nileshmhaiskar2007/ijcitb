@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="container">
+	<div class="row">
+		<div class="offset-2 col-lg-8 offset-2">
+			<div>
+				<h2>Show Your Papers</h2>
+				{% for article in articles %}
+				<div class="jumbotron">
+				    <h4>Title</h4>{{ article.title }}
+				    <h4>Abstract</h4>
+				    <p>{{ article.abstract }}</p>
+				    <h4>Keywords</h4>{{ article.keywords }}
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="container">
+	<div class="row">
+		<div class="offset-2 col-lg-8 offset-2">
+			<ul>
+				{% for paper in papers %}
+				<li><a href="{{ url_for('paper_whole',paper_id=paper.id) }}">{{ paper.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+{% endblock %}

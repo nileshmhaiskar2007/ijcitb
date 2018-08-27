@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container">
+	<div class="row">
+		<div class="offset-2 col-lg-8 offset-2">
+			<form method="post" action="{{ url_for('save_author') }}">
+				<div>
+					<table class="table">
+						<tr>
+							<td>
+								<h2>Author: Enter details</h2>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="fullname">FullName</label></td>
+							<td><input type="text" name="fullname" class="form-control" required></td>
+						</tr>
+						<tr>
+							<td><label for="designation">Designation</label></td>
+							<td><select name="designation">
+								<option value="Dr">Doctor</option>
+								<option value="Prof">Professor</option>
+								<option value="Lect">Lecturer</option>
+								<option value="ResFl">Research Fellow</option>
+								<option value="Res">Researcher</option>
+								<option value="UG">UnderGraduate</option>
+								<option value="IE">Industrial Employee</option>
+								<option value="GE">Govt. Employee</option>
+								<option value="Oth">Other</option>
+							</select></td>
+						</tr>
+						<tr>
+							<td><label for="email">Email</label></td>
+							<td><input type="email" name="email" class="form-control" required></td>
+						</tr>
+						<tr>
+							<td><label for="address">Address</label></td>
+							<td><textarea name="address" class="form-control" required></textarea></td>
+						</tr>
+						<tr>
+							<td><label for="phone">Phone</label></td>
+							<td><input type="text" name="phone" class="form-control" required></td>
+						</tr>
+						<tr><td>
+							<input type="submit" value="Register" class="btn btn-primary">
+						</td></tr>
+					</table>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}
